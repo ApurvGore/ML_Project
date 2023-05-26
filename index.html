@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Concrete Compressive Strength Predictor</title>
+</head>
+<body>
+
+    <h1>Concrete Compressive Strength Predictor</h1>
+
+    <form method="post" action="/predict">
+
+        <label>Cement (in kg/m^3)</label><br>
+        <input type="text" name="cement"><br><br>
+        <label>Blast Furnace Slag (in kg/m^3)</label><br>
+        <input type="text" name="blast_furnace_slag"><br><br>
+        <label>Fly Ash (in kg/m^3)</label><br>
+        <input type="text" name="fly_ash"><br><br>
+        <label>Water (in kg/m^3)</label><br>
+        <input type="text" name="water"><br><br>
+        <label>Superplasticizer (in kg/m^3)</label><br>
+        <input type="text" name="superplasticizer"><br><br>
+        <label>Coarse Aggregate (in kg/m^3)</label><br>
+        <input type="text" name="coarse_aggregate"><br><br>
+        <label>Fine Aggregate (in kg/m^3)</label><br>
+        <input type="text" name="fine_aggregate"><br><br>
+        <label>Age (in number of days)</label><br>
+        <input type="text" name="age"><br><br>
+
+        <input type="submit" value="Predict"><br><br>
+
+    </form>
+
+</body>
+</html>
