@@ -1,14 +1,16 @@
 from flask import Flask, render_template, request
-import pickle
+import joblib
 import numpy as np
 
-model = pickle.load(open('model.pkl', 'rb'))
+model = joblib.load('model.joblib')
 
 app = Flask(__name__)
+
 
 @app.route('/')
 def index():
     return render_template('index.html')
+
 
 @app.route('/predict', methods=['GET', 'POST'])
 def predict_strength():
@@ -25,6 +27,7 @@ def predict_strength():
     result = model.predict(np.array([cement, blast_furnace_slag, fly_ash, water, superplasticizer, coarse_aggregate, fine_aggregate, age]).reshape(1, 8))
 
     return str(result)
+
 
 if __name__ == '__main__':
     app.run(debug=True)
